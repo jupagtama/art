@@ -1,0 +1,68 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman";
+  height: 100vh;
+  width: 100vw;
+  margin: -8px;
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 100px;
+  letter-spacing: -25px;
+  text-align: top;
+  color: white;
+  white-space: nowrap;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: rgba(200,50,50,1);
+}
+
+.home:hover {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: rgba(250,100,100,1);
+}
+
+.about {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: rgba(200,100,200,1);
+}
+
+.about:hover {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: rgba(250,150,250,1);
+}
+
+.gallery {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: rgba(200,200,100,1);
+}
+
+.gallery:hover {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: rgba(250,250,150,1);
+}
+
+.contact {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: rgba(100,200,200,1);
+}
+
+.contact:hover {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: rgba(150,250,250,1);
+}
