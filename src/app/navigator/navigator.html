@@ -1,0 +1,16 @@
+<mat-drawer-container class="drawer-container">
+  <button mat-icon-button (click)="drawer.toggle()" class="open-button">
+    ☰
+  </button>
+  <mat-drawer class="buttons unselectable" aria-label="navigate" #drawer opened="true" mode="over">
+    <div class="flex-container">
+      <div class="home">Home</div>
+      <div class="about">About</div>
+      <div class="gallery">Gallery</div>
+      <div class="contact">Contact</div>
+    </div>
+    <button class="close" (click)="drawer.toggle()" mat-icon-button>
+      X
+    </button>
+  </mat-drawer>
+</mat-drawer-container>
