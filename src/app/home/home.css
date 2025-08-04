@@ -1,12 +1,30 @@
+/*
+#E7ECEF off-white
+#274C77 desaturated dark blue
+#6096BA desaturated sky blue
+#A3CEF1 sky blue
+#8B8C89 gray
+*/
+
 .body {
-    display: flex;
-    background-image: linear-gradient(rgba(50, 50, 50, 1), rgba(10, 10, 10, 1));
-    height: 100vh;
-    width: 100vw;
-    margin-top: -40px;
+  display: flex;
+  background-image: linear-gradient(#274C77,#6096BA);
+  height: 100vh;
+  width: 100vw;
+  margin-top: -40px;
 }
 
-@keyframes example {
+.content {
+  display: grid;
+  margin-left: auto;
+  grid-template-rows: auto;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  align-items: start;
+}
+
+
+
+@keyframes slideRight {
   from {
     transform: translateX(-100%);
     opacity: 0;
@@ -21,10 +39,49 @@
   margin-left: auto;
   padding-right: 20px;
   text-align: right;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: rgba(220, 220, 220, 1);
+  font-family: Anton;
+  letter-spacing: 3px;
+  color: #E7ECEF;
   font-size: 40px;
-  letter-spacing: 0px;
-  animation-name: example;
-  animation-duration: 2s;
+  animation-name: slideRight;
+  animation-duration: 1s;
+}
+
+hr {
+  margin-top: -275px;
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#FFFFFF;
+  height: 1px;
+  animation-name: slideRight;
+  animation-duration: 1s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.text {
+  border-radius: 0%;
+  align-self: start;
+  text-align: right;
+  width: 65vw;
+  margin-top: -500px;
+  color: #E7ECEF;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  letter-spacing: 1px;
+  margin-right: 40px;
+  animation-name: slideUp;
+  animation-duration: 1s;
 }
