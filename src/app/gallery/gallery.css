@@ -1,7 +1,84 @@
 .body {
+    position: fixed;
     display: flex;
-    background-color: rgba(50, 50, 50, 1);
+    background-image: linear-gradient(#274C77,#6096BA);
     height: 100vh;
     width: 100vw;
     margin-top: -40px;
+    justify-content: center;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    overflow: auto;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.header {
+    position: absolute;
+    justify-items: center;
+    margin-top: 25px;
+    color: #E7ECEF;
+    animation-name: slideDown;
+    animation-duration: 1s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+hr {
+  position: absolute;
+  margin-top: 100px;
+  padding: 0;
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#FFFFFF;
+  height: 1px;
+  animation-name: slideRight;
+  animation-duration: 1s;
+}
+
+.imgGrid {
+    position: absolute;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 100px;
+    row-gap: 100px;
+    color: #E7ECEF;
+    animation-name: slideUp;
+    animation-duration: 1s;
+}
+
+.img {
+    min-width: 400px;
+    min-height: 550px;
+    background-color: #274C77;
+    border-style: inset;
+    border-color: #E7ECEF;
+    border-width: 3px;
+}
+
+.img:hover {
+    background-color: #366fb1;
+    cursor: pointer;
 }

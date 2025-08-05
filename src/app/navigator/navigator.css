@@ -13,6 +13,17 @@
   width: 100vw;
 }
 
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -57,4 +68,10 @@
   top: 10px;
   left: 97%;
   font-family: Impact;
+}
+
+.open-button {
+  color: white;
+  position: relative;
+  z-index: 2;
 }
