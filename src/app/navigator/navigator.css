@@ -27,7 +27,7 @@
 .buttons {
   display: flex;
   justify-content: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Anton;
   text-shadow:-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
   height: 100vh;
   width: 100vw;
@@ -45,21 +45,21 @@
   text-orientation: upright;
   border: 1px;
   display: flex;
-  font-family: Impact;
+  font-family: 'Anton';
   font-size: 100px;
-  letter-spacing: -35px;
+  letter-spacing: -60px;
   color: white;
   text-shadow:-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
   white-space: nowrap;
   padding-top: 50px;
-  background-image: radial-gradient(rgba(50,50,200,1),rgba(25,25,150,1));
+  background-image: radial-gradient(#6096BA, #274C77);
 }
 
 .navigation:hover {
   cursor: pointer;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  background-image: radial-gradient(rgba(100,100,250,1),rgba(75,75,200,1));
+  background-image: radial-gradient(#74a0bd,#325275);
 }
 
 .close {
@@ -67,7 +67,7 @@
   background-color: beige;
   top: 10px;
   left: 97%;
-  font-family: Impact;
+  font-family: Anton;
 }
 
 .open-button {

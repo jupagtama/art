@@ -54,7 +54,20 @@ hr {
     row-gap: 50px;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .contact {
-    text-align: center;
-    font-size: 25px;
+  text-align: center;
+  font-size: 25px;
+  animation-name: slideUp;
+  animation-duration: 1s;
 }
