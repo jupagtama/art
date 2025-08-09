@@ -1,13 +1,13 @@
 .body {
-    position: fixed;
-    display: flex;
-    background-image: linear-gradient(#274C77,#6096BA);
-    height: 100vh;
-    width: 100vw;
-    margin-top: -40px;
-    justify-content: center;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    overflow: auto;
+  position: fixed;
+  display: flex;
+  background-image: linear-gradient(#274C77,#6096BA);
+  height: 100vh;
+  width: 100vw;
+  margin-top: -40px;
+  justify-content: center;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow: auto;
 }
 
 @keyframes slideDown {
@@ -23,12 +23,12 @@
 
 
 .header {
-    position: absolute;
-    justify-items: center;
-    margin-top: 25px;
-    color: #E7ECEF;
-    animation-name: slideDown;
-    animation-duration: 1s;
+  position: absolute;
+  justify-items: center;
+  margin-top: 25px;
+  color: #E7ECEF;
+  animation-name: slideDown;
+  animation-duration: 1s;
 }
 
 @keyframes slideUp {
@@ -57,28 +57,42 @@ hr {
 }
 
 .imgGrid {
-    position: absolute;
-    margin-top: 150px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    column-gap: 100px;
-    row-gap: 100px;
-    color: #E7ECEF;
-    animation-name: slideUp;
-    animation-duration: 1s;
+  position: absolute;
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 100px;
+  row-gap: 100px;
+  color: #E7ECEF;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  padding: 100px;
 }
 
 .img {
-    min-width: 400px;
-    min-height: 550px;
-    background-color: #274C77;
-    border-style: inset;
-    border-color: #E7ECEF;
-    border-width: 3px;
+  width: 400px;
+  height: 550px;
+  background-color: #274C77;
+  border-style: inset;
+  border-color: #E7ECEF;
+  border-width: 3px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img:hover {
-    background-color: #366fb1;
-    cursor: pointer;
+  background-color: #366fb1;
+  cursor: pointer;
+}
+
+::ng-deep .custom-dialog-container .mat-dialog-container {
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
 }

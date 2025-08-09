@@ -1,0 +1,20 @@
+.art-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  border: 3px solid #E7ECEF; /* or whatever color you want */
+  background-color: #000;    /* optional: so border stands out against image */
+}
+
+img {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+img.clicked {
+  transform: scale(4);
+}
