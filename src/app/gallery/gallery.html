@@ -5,7 +5,7 @@
     <hr />
     <div class="imgGrid" id="images">
         <div class="img" *ngFor="let image of images" (click)="openImageDialog(image.url)">
-            <img [src]="image.url" alt="Art Image">
+            <img [src]="image.url" alt="Art Image" loading="lazy">
         </div>
         <div class="img" id="img2">
             Img 2
