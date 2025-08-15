@@ -3,6 +3,10 @@
         <h1>Gallery</h1>
     </div >
     <hr />
+    <form class="searchbar">
+        <input type="text" placeholder="Search by name/tag" #filter>
+        <button class="searchButton" type="button">Search</button>
+    </form>
     <div class="imgGrid" id="images">
         <div class="img" *ngFor="let image of images" (click)="openImageDialog(image.url)">
             <img [src]="image.url" alt="Art Image" loading="lazy">

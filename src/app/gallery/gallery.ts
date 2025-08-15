@@ -5,15 +5,16 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-gallery',
-  imports: [CommonModule],
+  imports: [CommonModule,
+  ],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css'
 })
 
 export class Gallery {
   images = [
-    { url: 'https://res.cloudinary.com/dd3s6lmus/image/upload/v1754698117/riceshower_sujvl6.webp'},
-    { url: 'https://res.cloudinary.com/dd3s6lmus/image/upload/v1754962290/widetest_yzcfsi.webp'}
+    { url: 'https://res.cloudinary.com/dd3s6lmus/image/upload/v1754698117/riceshower_sujvl6.webp', tags: 'umamusume, rice shower'},
+    { url: 'https://res.cloudinary.com/dd3s6lmus/image/upload/v1754962290/widetest_yzcfsi.webp', tags: 'empty, test'}
   ]
   constructor(private dialog: MatDialog) {}
 
