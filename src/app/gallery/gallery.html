@@ -3,13 +3,13 @@
         <h1>Gallery</h1>
     </div >
     <hr />
-    <form class="searchbar">
-        <input type="text" placeholder="Search by name/tag" #filter>
-        <button class="searchButton" type="button">Search</button>
+    <form class="searchbar" (submit)="$event.preventDefault()">
+        <input type="text" placeholder="Search by name/tag" #filter (keydown.enter)="filterResults(filter.value)">
+        <button class="searchButton" type="button" (click)="filterResults(filter.value)">Search</button>
     </form>
     <div class="imgGrid" id="images">
-        <div class="img" *ngFor="let image of images" (click)="openImageDialog(image.url)">
-            <img [src]="image.url" alt="Art Image" loading="lazy">
+        <div class="img" *ngFor="let art of filteredArt" (click)="openImageDialog(art.url)">
+            <img [src]="art.url" alt="{{art.title}}" loading="lazy">
         </div>
     </div>
 </div>

@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Card } from '../card/card';
 import { CommonModule } from '@angular/common';
+import { GalleryService } from './gallery.service';
+import { inject } from '@angular/core';
+import { artData } from './artData';
 
 @Component({
   selector: 'app-gallery',
@@ -12,11 +15,17 @@ import { CommonModule } from '@angular/common';
 })
 
 export class Gallery {
-  images = [
-    { url: 'https://res.cloudinary.com/dd3s6lmus/image/upload/v1754698117/riceshower_sujvl6.webp', tags: 'umamusume, rice shower'},
-    { url: 'https://res.cloudinary.com/dd3s6lmus/image/upload/v1754962290/widetest_yzcfsi.webp', tags: 'empty, test'}
-  ]
-  constructor(private dialog: MatDialog) {}
+  private galleryService = inject(GalleryService);
+
+  allArt: artData[] = [];
+  filteredArt: artData[] = [];
+  constructor(private dialog: MatDialog) {
+  }
+
+  ngOnInit() {
+    this.allArt = this.galleryService.getAllArt();
+    this.filteredArt = [...this.allArt];
+  }
 
   openImageDialog(imageUrl: string) {
     const img = new Image();
@@ -43,5 +52,15 @@ export class Gallery {
         maxHeight: '100vh'
       });
     };
+  }
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredArt = this.allArt;
+      return;
+    }
+
+    this.filteredArt = this.allArt.filter(
+      artData => artData?.tags.toLowerCase().includes(text.toLowerCase())
+    );
   }
 }
