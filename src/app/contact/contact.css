@@ -1,7 +1,7 @@
 .body {
     position: fixed;
     display: flex;
-    background-image: linear-gradient(#274C77,#6096BA);
+    background: #1b1b1b;
     height: 100vh;
     width: 100vw;
     margin-top: -40px;
@@ -67,6 +67,7 @@ hr {
 
 .contact {
   text-align: center;
+  line-height: 30px;
   font-size: 25px;
   animation-name: slideUp;
   animation-duration: 1s;

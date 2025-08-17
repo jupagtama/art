@@ -52,14 +52,14 @@
   text-shadow:-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
   white-space: nowrap;
   padding-top: 50px;
-  background-image: radial-gradient(#6096BA, #274C77);
+  background: #1b1b1b;
 }
 
 .navigation:hover {
   cursor: pointer;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  background-image: radial-gradient(#74a0bd,#325275);
+  background: #302f2f;
 }
 
 .close {
