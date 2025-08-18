@@ -27,9 +27,9 @@ export class Gallery {
     this.filteredArt = [...this.allArt];
   }
 
-  openImageDialog(imageUrl: string) {
+  openImageDialog(art: artData) {
     const img = new Image();
-    img.src = imageUrl;
+    img.src = art.url;
 
     img.onload = () => {
       const aspect = img.width / img.height;
@@ -45,11 +45,11 @@ export class Gallery {
       }
 
       this.dialog.open(Card, {
-        data: { imageUrl },
+        data: { imageUrl: art.url, title: art.title, tags: art.tags },
         panelClass: 'art-card',
-        width: `${width}px`,
-        maxWidth: '100vw',
-        maxHeight: '100vh'
+        width: '80vw',
+        maxWidth: '95vw',
+        maxHeight: '95vh',
       });
     };
   }

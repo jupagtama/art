@@ -11,12 +11,12 @@ export class GalleryService {
     {
       title: 'Rice Shower',
       url: 'https://res.cloudinary.com/dd3s6lmus/image/upload/v1754698117/riceshower_sujvl6.webp',
-      tags: 'umamusume, rice shower',
+      tags: 'umamusume, rice shower, 2025',
     },
     {
       title: 'Test',
       url: 'https://res.cloudinary.com/dd3s6lmus/image/upload/v1754962290/widetest_yzcfsi.webp',
-      tags: 'empty, test',
+      tags: 'empty, test, 2025',
     }
   ];
 

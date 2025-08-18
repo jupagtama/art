@@ -1,4 +1,15 @@
-<div class="art-card" >
-  <img [src]="data.imageUrl" alt="Enlarged Image"
-  [ngClass]="{'clicked': isZoomed}" (click)="toggleZoom()"/>
+<div class="art-container">
+  <div class="art-card" [ngClass]="{ 'zoomed': isZoomed }">
+    <img 
+      [src]="data.imageUrl" 
+      alt="{{ data.title }}"
+      [ngClass]="{ 'zoomed': isZoomed }"
+      (click)="toggleZoom($event)" 
+    />
+  </div>
+  <div class="art-info">
+    <h2 class="dialog-title">{{ data.title }}</h2>
+    <hr />
+    <p class="tags">tags: {{ data.tags }}</p>
+  </div>
 </div>

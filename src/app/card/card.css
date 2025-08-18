@@ -1,30 +1,48 @@
+.art-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 .art-card {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 3px solid #E7ECEF;
   background-color: #000;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+.art-card.zoomed {
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
 }
 
 .art-card img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  cursor: zoom-in;
 }
 
-img:hover {
-  cursor: zoom-in; 
+.art-card img.zoomed {
+  width: 200%;
+  height: auto;
+  cursor: zoom-out;
 }
 
-img.clicked {
-  transform: scale(2) translate(25%, 25%);
-  overflow:scroll;
-  scrollbar-color: #888 #f1f1f1;
-  scrollbar-width: thin;
+.art-info {
+  padding-left: 15px;
+  padding-right: 100px;
+  margin-top: -15px;
+  font-family: system-ui;
+  font-size: 25px;
 }
 
-.mdc-dialog__surface {
-  border-radius: 0 !important;
+.tags {
+  color: #888;
+  font-size: 20px;
 }
-

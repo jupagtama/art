@@ -10,10 +10,14 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrl: './card.css'
 })
 export class Card {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { imageUrl: string }) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
   isZoomed = false;
 
-  toggleZoom() {
-    this.isZoomed = !this.isZoomed;
-  }
+  toggleZoom(event: MouseEvent) {
+  const img = event.target as HTMLImageElement;
+  const card = img.parentElement;
+  img.classList.toggle('zoomed');
+  card?.classList.toggle('zoomed');
+}
+  
 }

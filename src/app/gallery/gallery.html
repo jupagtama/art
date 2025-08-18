@@ -8,8 +8,9 @@
         <button class="searchButton" type="button" (click)="filterResults(filter.value)">Search</button>
     </form>
     <div class="imgGrid" id="images">
-        <div class="img" *ngFor="let art of filteredArt" (click)="openImageDialog(art.url)">
+        <div class="img" *ngFor="let art of filteredArt" (click)="openImageDialog(art)">
             <img [src]="art.url" alt="{{art.title}}" loading="lazy">
+
         </div>
     </div>
 </div>
